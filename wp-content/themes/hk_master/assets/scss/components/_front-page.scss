@@ -1,0 +1,23 @@
+body, html {
+  height: 100vh;
+  width: 100%;
+}
+
+.front-page {
+
+  #menu-main-menu {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+
+    & > li {
+      display: block;
+    }
+
+
+  }
+
+}
