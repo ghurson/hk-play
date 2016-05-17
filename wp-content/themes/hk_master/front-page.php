@@ -15,9 +15,8 @@ Theme::output_file_marker(__FILE__);
 
         <div class="bg-svg"></div>
 
-        <div class="title-block"></div>
-
         <div class="menu">
+            <div class="title-block"></div>
 
             <?php wp_nav_menu([
                 'theme_location' => 'primary'

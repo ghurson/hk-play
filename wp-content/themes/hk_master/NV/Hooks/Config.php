@@ -124,6 +124,8 @@ class Config {
 		/******************
 		 * STYLES / CSS
 		 ******************/
+		// Google Fonts
+		wp_enqueue_style( 'google_font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' );
 
 		// Base stylesheet (compiled Foundation SASS)
 		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
@@ -136,7 +138,7 @@ class Config {
 		 ******************/
 
 		// Toggle .min on js suffixes if debug
-		$js_min = ( WP_DEBUG ) ? '' : '.min';
+//		$js_min = ( WP_DEBUG ) ? '' : '.min';
 
 		// Remove WordPress's jQuery and use our own
 		wp_deregister_script( 'jquery' );

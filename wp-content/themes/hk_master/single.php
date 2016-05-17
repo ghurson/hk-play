@@ -14,7 +14,7 @@ Theme::output_file_marker( __FILE__ );
 			<?php Theme::loop( 'parts/article-with-comments', 'parts/article-empty' ) ?>
 		</div>
 		<div id="sidebar" class="small-12 large-4 columns">
-			<?php dynamic_sidebar( 'sidebar-1' ) ?>
+			<p>sidebar here</p>
 		</div>
 	</div>
 <?php

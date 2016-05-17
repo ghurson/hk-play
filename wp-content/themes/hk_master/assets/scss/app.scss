@@ -8,8 +8,8 @@
 @charset 'utf-8';
 
 @import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import '../../bower_components/foundation-sites/scss/foundation';
+@import '../../bower_components/motion-ui/motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -62,4 +62,7 @@
 // Load NOUVEAU compatibility styles
 @import "nv-wordpress";
 
+@import "components/variables";
 @import "components/front-page";
+@import "components/header";
+@import "components/footer";

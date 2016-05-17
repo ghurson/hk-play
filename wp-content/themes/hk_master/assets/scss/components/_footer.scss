@@ -1,0 +1,28 @@
+.hk_footer {
+
+  border-top: 1px solid black;
+
+  .hk_footer_menu {
+
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+      padding: 0 5px;
+    }
+
+    ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      li {
+        display: block;
+      }
+    }
+
+  }
+
+}

@@ -2,11 +2,21 @@
 
 namespace GH;
 
-class Display {
+define(ROOT, '/hk/');
 
-    static function footer(){
+define(HK_SVG, ROOT . '/wp-content/themes/hk_master/assets/svg/');
 
-        get_template_part("parts/global/footer");
+class Display
+{
+
+    static function footer()
+    {
+
+        if (is_front_page()):
+            get_template_part("parts/global/footer");
+        else:
+            get_template_part("parts/interior/footer");
+        endif;
 
     }
 }
