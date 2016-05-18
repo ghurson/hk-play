@@ -1,13 +1,6 @@
-body, html, #frame {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  background-color: #4f1716;
-}
+
 
 .front-page {
-
-
 
   #menu-main-menu {
 
@@ -16,19 +9,28 @@ body, html, #frame {
     right: 55px;
     text-align: right;
 
-    & > li {
-      display: block;
-    }
-
     a {
-      padding: 0 0 15px 0;
+      padding: 0;
       margin: 0;
+      line-height: 1.5;
     }
 
     ul {
-      margin: 0;
+      margin: 7px 0 0 0;
+      padding: 7px 0 0 15px;
+      border-top: 1px solid white;
+
+      a {
+        font-size: 14px;
+      }
+
     }
 
+    li {
+      display: block;
+      list-style-type: none;
+      margin: 0;
+    }
 
   }
 
@@ -61,6 +63,5 @@ body, html, #frame {
     bottom: 0;
     text-align: right;
   }
-
 
 }

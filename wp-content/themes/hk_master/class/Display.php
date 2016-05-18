@@ -19,4 +19,18 @@ class Display
         endif;
 
     }
+
+    static function pagination($query = false)
+    {
+
+        if (!function_exists('wp_pagenavi')) return false;
+
+        if ($query):
+            wp_pagenavi(['query' => $query]);
+        else:
+            wp_pagenavi();
+        endif;
+
+    }
+
 }

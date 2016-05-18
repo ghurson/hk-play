@@ -11,15 +11,16 @@ function init_jsddm() {
     var timeout = 500;
     var closetimer = 0;
     var ddmenuitem = 0;
+    var speed = 250;
 
     function jsddm_open() {
         jsddm_canceltimer();
         jsddm_close();
-        ddmenuitem = $(this).find('ul').css('visibility', 'visible');
+        ddmenuitem = $(this).find('ul').stop().slideDown(speed);
     }
 
     function jsddm_close() {
-        if (ddmenuitem) ddmenuitem.css('visibility', 'hidden');
+        if (ddmenuitem) ddmenuitem.stop().slideUp(speed);
     }
 
     function jsddm_timer() {
@@ -36,16 +37,38 @@ function init_jsddm() {
     $(document).ready(function () {
         $('.hk_header_menu > li').bind('mouseover', jsddm_open);
         $('.hk_header_menu > li').bind('mouseout', jsddm_timer);
+        $('#menu-main-menu > li').bind('mouseover', jsddm_open);
+        $('#menu-main-menu > li').bind('mouseout', jsddm_timer);
     });
 
     document.onclick = jsddm_close;
 }
 
+function init_bg_tween(){
 
-$(function () {
+    TweenMax.to(".home #frame", 2, {backgroundColor: "#4f1716", 'delay': 2});
 
-    init_jsddm();
+}
 
-});
+
+function init_url_click(){
+
+    var obj = $("*[data-url]");
+
+    obj.addClass("testing");
+
+    obj.css("cursor","pointer");
+
+    obj.click(function(){
+        console.log($(this).data("href"));
+        window.location.href = $(this).data("url");
+    })
+
+}
+
+
+init_jsddm();
+init_bg_tween();
+init_url_click();
 
 $(document).foundation();

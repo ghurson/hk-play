@@ -150,6 +150,9 @@ class Config {
 		// Load the complete version of Foundation
 		wp_enqueue_script( 'foundation', NV::i()->get_url( 'bower', 'foundation-sites/dist/foundation' . $js_min . '.js' ), array( 'jquery', 'what-input' ), false, true );
 
+		// Theme JS Files
+		wp_enqueue_script( 'greensock', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js', array( 'jquery' ), false, true );
+
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
 		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );
 

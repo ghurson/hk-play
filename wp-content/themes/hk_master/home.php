@@ -12,15 +12,13 @@ Theme::output_file_marker(__FILE__);
 ?>
 <?php get_template_part("parts/interior/header") ?>
     <div id="container" class="row">
-        <div id="content" class="medium-8 medium-centered columns">
-            <?php //Theme::archive_nav( array( 'id' => 'nav-top' ) ) ?>
-            <?php wp_link_pages(); ?>
+        <div id="content" class="blog-container columns">
 
-            <?php Theme::loop('parts/article', 'parts/article-empty') ?>
+            <div class="small-up-1 medium-up-2">
+                <?php Theme::loop('parts/excerpt', 'parts/excerpt-empty') ?>
+            </div>
+            <?php GH\Display::pagination() ?>
 
-            <?php paginate_links(); ?>
-
-            <?php get_template_part('parts/archive-nav') ?>
         </div>
     </div>
 
