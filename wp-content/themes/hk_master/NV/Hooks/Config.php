@@ -127,6 +127,9 @@ class Config {
 		// Google Fonts
 		wp_enqueue_style( 'google_font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' );
 
+		// Fontello Icons
+		wp_enqueue_style( 'fontello', HK_FONT . '/css/fontello.css' );
+
 		// Base stylesheet (compiled Foundation SASS)
 		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
 

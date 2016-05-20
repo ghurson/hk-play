@@ -2,9 +2,10 @@
 
 namespace GH;
 
-define(ROOT, '/hk/');
+define(ROOT, get_site_url());
 
-define(HK_SVG, ROOT . '/wp-content/themes/hk_master/assets/svg/');
+define(HK_SVG, ROOT . '/wp-content/themes/hk_master/assets/svg');
+define(HK_FONT, ROOT . '/wp-content/themes/hk_master/assets/font');
 
 class Display
 {

@@ -16,7 +16,7 @@
         <?php the_post_thumbnail() ?>
 
         <div class="content">
-            <?php print wp_trim_words($post->post_content) ?>
+            <?php print apply_filters("the_content", wp_trim_words($post->post_content)) ?>
         </div>
     </div>
 

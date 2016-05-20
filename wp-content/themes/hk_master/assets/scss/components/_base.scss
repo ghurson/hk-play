@@ -1,5 +1,7 @@
-a {
-  color: white;
+@include breakpoint(600px down){
+  #wpadminbar {
+    top: -46px;
+  }
 }
 
 body, html, #frame {
@@ -15,11 +17,25 @@ body, html, #frame {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
 
-  .home & {
-    background-color: black;
-    background-image: none;
+.home .frame-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+a {
+  color: lighten($text-color, 15);
+  word-wrap: break-word;
+
+  &:hover {
+    color: red;
   }
+  
 }
 
 article {
@@ -34,8 +50,22 @@ article {
 
     .excerpt-content {
       padding: 15px;
-      background: rgba(255, 255, 255, .25);
+      background: $black-shade;
     }
+  }
+
+  li, p {
+    color: $text-color;
+    font-size: 18px;
+  }
+
+  .page & {
+    padding: 15px;
+    background: $black-shade;
+  }
+
+  a {
+    font-weight: 600;
   }
 
 }

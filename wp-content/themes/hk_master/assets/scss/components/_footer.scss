@@ -1,6 +1,7 @@
 .hk_footer {
 
   border-top: 1px solid rgba(255,255,255,.5);
+  background-color: $black-shade;
 
   .hk_footer_menu {
 
@@ -22,6 +23,11 @@
         display: block;
       }
     }
+
+    a {
+      font-size: 18px;
+    }
+
 
   }
 

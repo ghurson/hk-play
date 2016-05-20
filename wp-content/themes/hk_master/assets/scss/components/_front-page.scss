@@ -1,13 +1,13 @@
 
-
 .front-page {
 
-  #menu-main-menu {
+  div.menu {
 
     position: absolute;
     top: 340px;
     right: 55px;
     text-align: right;
+    z-index: 2;
 
     a {
       padding: 0;
@@ -15,7 +15,7 @@
       line-height: 1.5;
     }
 
-    ul {
+    .sub-menu {
       margin: 7px 0 0 0;
       padding: 7px 0 0 15px;
       border-top: 1px solid white;
@@ -30,6 +30,29 @@
       display: block;
       list-style-type: none;
       margin: 0;
+    }
+
+    @include breakpoint(small down) {
+      top: auto;
+      right: auto;
+      bottom: 15px;
+      left: 15px;
+      text-align: left;
+
+      ul {
+        border-top: none;
+      }
+
+      .sub-menu {
+        //border-top: none;
+        margin: 0;
+        padding: 0 0 0 15px;
+      }
+
+      a {
+        line-height: 1.8;
+      }
+
     }
 
   }
@@ -56,12 +79,18 @@
     position: absolute;
     right: 30px;
     top: 30px;
+
+    @include breakpoint(small down) {
+      right: -3px;
+      top: -5px;
+    }
+
   }
 
   #footer {
     position: absolute;
     bottom: 0;
-    text-align: right;
+    right: 39px;
   }
 
 }

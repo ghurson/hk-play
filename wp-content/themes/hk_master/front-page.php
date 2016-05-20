@@ -11,22 +11,28 @@ Theme::get_header();
 Theme::output_file_marker(__FILE__);
 ?>
 
+    <div class="frame-screen"></div>
+
     <div class="front-page">
 
         <div class="bg-svg"></div>
-
 
         <div class="menu">
             <?php wp_nav_menu([
                 'theme_location' => 'primary'
             ]) ?>
+            <div class="hide-for-medium">
+                <?php wp_nav_menu([
+                    'theme_location' => 'footer'
+                ]) ?>
+            </div>
         </div>
-
 
         <div class="title-block"></div>
 
-
-        <?php GH\Display::footer() ?>
+        <div class="show-for-medium">
+            <?php GH\Display::footer() ?>
+        </div>
 
     </div>
 <?php

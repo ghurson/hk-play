@@ -2,7 +2,12 @@
 
   position: relative;
   padding-top: 20px;
-  z-index: 2;
+  z-index: 3;
+
+  @include breakpoint(small down){
+    padding-bottom: 10px;
+  }
+
 
   .header_logo {
     width: 200px;
@@ -34,11 +39,13 @@
       position: absolute;
       display: none;
       top: calc(100% + 1px);
-      right: -10px;
+      right: -15px;
       margin: 0;
-      width: 200px;
-      background: $white-shade;
-      padding: 10px;
+      width: 250px;
+      background: $black-shade;
+      padding: 5px 15px;
+      border: 1px solid black;
+      border-top: none;
       li {
         display: block;
       }
@@ -46,8 +53,61 @@
 
     a {
       font-weight: 100;
+      font-size: 18px;
+      display: block;
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
 
   }
+
+  .mobile-menu-launch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  i {
+    color: rgba(255,255,255,0.8);
+    font-size: 63px;
+    margin: 0;
+    position: relative;
+    top: 38px;
+  }
+
+}
+
+.mobile-menu-container {
+
+  border-top: 1px solid black;
+
+  .hk_header_menu {
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+  }
+
+  a {
+    display: block;
+    padding: 10px 15px;
+    background: $black-shade;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .sub-menu a {
+    font-size: 90%;
+  }
+
 
 }

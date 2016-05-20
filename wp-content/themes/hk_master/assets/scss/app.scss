@@ -5,7 +5,7 @@
 // separate .scss files and import your own styles at the bottom of this file.
 // =======================================================================================================================
 
-@charset 'utf-8';
+@charset "utf-8";
 
 @import 'settings';
 @import '../../bower_components/foundation-sites/scss/foundation';
@@ -60,9 +60,9 @@
 @import "nv-mixins";
 
 // Load NOUVEAU compatibility styles
+@import "components/variables";
 @import "nv-wordpress";
 
-@import "components/variables";
 @import "components/base";
 @import "components/front-page";
 @import "components/header";
