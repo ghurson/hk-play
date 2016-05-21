@@ -5,8 +5,7 @@
 
     position: absolute;
     top: 340px;
-    right: 55px;
-    text-align: right;
+    left: 40px;
     z-index: 2;
 
     @include breakpoint(xlarge up){
@@ -25,9 +24,9 @@
     }
 
     .sub-menu {
-      margin: 10px 8px 10px 0;
-      padding: 0px 15px 7px 0px;
-      border-right: 1px solid rgba(255, 255, 255, 0.38);
+      margin: 10px 0 10px 8px;
+      padding: 0 0 7px 15px;
+      border-left: 1px solid rgba(255, 255, 255, 0.38);
       a {
         font-size: 14px;
       }
@@ -98,19 +97,22 @@
   }
 
   .title-block {
-    background-image: url(../svg/title.svg);
+    background-image: url(../svg/title-left.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     width: 300px;
     height: 295px;
     position: absolute;
-    right: 30px;
+    left: 30px;
     top: 30px;
 
     @include breakpoint(small down) {
-      right: -3px;
-      top: -5px;
+      left: 0;
+      top: 0px;
+      right: -14px;
+      width: auto;
+      background-position: top left;
     }
 
     @include breakpoint(xlarge up){

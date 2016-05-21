@@ -74,11 +74,44 @@ function init_mobile_menu() {
 
 }
 
+function init_carousel(){
+
+    var carousel = $(".home-blog .owl-carousel");
+
+    if(!carousel.length) return false;
+
+    carousel.owlCarousel({
+        loop: true,
+        center: true,
+        items: 1
+    });
+
+}
+
+function init_audio_player(){
+    return false;
+    soundManager.setup({
+        url: '/wp-content/themes/hk_master/swf/soundmanager2.swf',
+        onready: function() {
+            var mySound = soundManager.createSound({
+                id: 'aSound',
+                url: 'http://104.130.5.185/hk/wp-content/uploads/2016/05/sample-hail-to-the-chief.mp3'
+            });
+            mySound.play();
+        },
+        ontimeout: function() {
+            // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+        }
+    });
+}
+
+
 
 init_jsddm();
 init_bg_tween();
 init_url_click();
 init_mobile_menu();
-
+init_carousel();
+init_audio_player();
 
 $(document).foundation();

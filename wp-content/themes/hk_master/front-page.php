@@ -17,6 +17,8 @@ Theme::output_file_marker(__FILE__);
 
         <div class="bg-svg"></div>
 
+        <?php get_template_part("parts/home/blog") ?>
+
         <div class="menu">
             <?php wp_nav_menu([
                 'theme_location' => 'primary'

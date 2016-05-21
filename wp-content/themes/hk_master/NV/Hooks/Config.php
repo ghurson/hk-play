@@ -127,6 +127,10 @@ class Config {
 		// Google Fonts
 		wp_enqueue_style( 'google_font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' );
 
+		// Owl Carousel + Base Theme File
+		wp_enqueue_style( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.4/assets/owl.carousel.min.css' );
+		wp_enqueue_style( 'owl-carousel-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.4/assets/owl.theme.default.min.css' );
+
 		// Fontello Icons
 		wp_enqueue_style( 'fontello', HK_FONT . '/css/fontello.css' );
 
@@ -155,6 +159,7 @@ class Config {
 
 		// Theme JS Files
 		wp_enqueue_script( 'greensock', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.4/owl.carousel.min.js', array( 'jquery' ), false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
 		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );

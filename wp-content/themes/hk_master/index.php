@@ -13,14 +13,8 @@ Theme::output_file_marker(__FILE__);
 <?php get_template_part("parts/interior/header") ?>
     <div id="container" class="row">
         <div id="content" class="medium-10 medium-centered columns">
-            <?php //Theme::archive_nav( array( 'id' => 'nav-top' ) ) ?>
-            <?php wp_link_pages(); ?>
-
             <?php Theme::loop('parts/article', 'parts/article-empty') ?>
 
-            <?php paginate_links(); ?>
-
-            <?php get_template_part('parts/archive-nav') ?>
         </div>
     </div>
 

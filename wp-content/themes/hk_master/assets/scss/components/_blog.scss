@@ -27,3 +27,49 @@
   }
 
 }
+
+.home-blog {
+
+  position: absolute;
+  z-index: 2;
+  top: 210px;
+  left: 340px;
+  right: 20px;
+  bottom: 80px;
+
+  @include breakpoint(xlarge up){
+    left: 710px;
+    top: 345px;
+    right: 40px;
+    bottom: 50px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  p {
+    color: $text-color;
+  }
+
+  .owl-dots {
+    text-align: center;
+    padding-top: 50px;
+
+    .owl-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: $white-shade;
+      border: 1px solid white;
+      border-radius: 100%;
+      margin: 0 5px;
+
+      &.active {
+        background: white;
+      }
+    }
+  }
+
+}

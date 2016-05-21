@@ -19,4 +19,6 @@
         <?php the_content() ?>
     </div>
 
+    <?php GH\Display::guitar_licks(get_the_ID()) ?>
+
 </article>

@@ -6,6 +6,7 @@ define(ROOT, get_site_url());
 
 define(HK_SVG, ROOT . '/wp-content/themes/hk_master/assets/svg');
 define(HK_FONT, ROOT . '/wp-content/themes/hk_master/assets/font');
+define(HK_SWF, ROOT . '/wp-content/themes/hk_master/assets/swf');
 
 class Display
 {
@@ -34,4 +35,23 @@ class Display
 
     }
 
+    static function guitar_licks($id){
+        if($id != 25) return false;
+        get_template_part("parts/guitar-licks");
+    }
+
+}
+
+class Blog {
+    static function get_posts($amount = 3){
+
+        $query = new \WP_Query([
+            'posts_per_page' => $amount
+        ]);
+
+        return $query->found_posts ? $query->posts : false;
+
+
+
+    }
 }
