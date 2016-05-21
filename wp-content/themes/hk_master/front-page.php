@@ -30,10 +30,6 @@ Theme::output_file_marker(__FILE__);
 
         <div class="title-block"></div>
 
-        <div class="show-for-medium">
-            <?php GH\Display::footer() ?>
-        </div>
-
     </div>
 <?php
 Theme::get_footer();
