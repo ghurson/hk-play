@@ -1,13 +1,22 @@
 .hk_header {
 
   position: relative;
-  padding-top: 20px;
   z-index: 3;
+  margin: 20px auto;
+  transition: all 250ms ease-out;
 
-  @include breakpoint(small down){
-    padding-bottom: 10px;
+  &.active {
+    background-color: $black-shade;
   }
 
+  @include breakpoint(large up){
+    margin: 35px auto;
+  }
+
+  @include breakpoint(small down) {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
 
   .header_logo {
     width: 200px;
@@ -22,28 +31,30 @@
     right: 0;
     bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    text-align: right;
     margin: 0 15px 0 0;
     padding: 0 15px 0;
 
-    li {
-      display: inline-block;
-      position: relative;
+    & > li {
       padding-left: 15px;
       &:first-of-type {
         padding: 0;
       }
     }
 
+    li {
+      display: inline-block;
+      position: relative;
+    }
+
     ul {
       position: absolute;
       display: none;
       top: calc(100% + 1px);
-      right: -15px;
+      left: 0;
       margin: 0;
       width: 250px;
-      background: $black-shade;
-      padding: 5px 15px;
+      background: rgba(0, 0, 0, .8);
+      padding: 20px 15px 5px;
       border: 1px solid black;
       border-top: none;
       li {
@@ -72,7 +83,7 @@
   }
 
   i {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 63px;
     margin: 0;
     position: relative;
@@ -83,12 +94,13 @@
 
 .mobile-menu-container {
 
-  border-top: 1px solid black;
+  margin-bottom: 30px;
 
   .hk_header_menu {
     display: none;
     position: relative;
     z-index: 2;
+
   }
 
   ul {
@@ -108,6 +120,5 @@
   .sub-menu a {
     font-size: 90%;
   }
-
 
 }

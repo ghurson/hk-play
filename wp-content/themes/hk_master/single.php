@@ -1,21 +1,30 @@
 <?php
 /**
- * SINGLE BLOG POSTS
+ * DEFAULT TEMPLATE
  *
- * This is the template for single, full-page blog posts.
+ * This is the global default template. If WordPress can't find a more appropriate, specific template file,
+ * it will use this one.
  */
 use \NV\Theme\Utilities\Theme;
 
 Theme::get_header();
-Theme::output_file_marker( __FILE__ );
+Theme::output_file_marker(__FILE__);
 ?>
-	<div id="container" class="row">
-		<div id="content" class="small-12 large-8 columns">
-			<?php Theme::loop( 'parts/article-with-comments', 'parts/article-empty' ) ?>
-		</div>
-		<div id="sidebar" class="small-12 large-4 columns">
-			<p>sidebar here</p>
-		</div>
-	</div>
+<?php get_template_part("parts/interior/header") ?>
+    <div id="container" class="row">
+        <div id="content" class="medium-10 medium-centered columns">
+            <?php Theme::loop('parts/article', 'parts/article-empty') ?>
+            <div class="text-center">
+                <a href="<?php print site_url("blog") ?>" class="button blog_return">Return to Blog</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="falling_graphic">
+        <object data="<?php print HK_SVG ?>/falling.svg" type="image/svg+xml"></object>
+    </div>
+
+<?php GH\Display::footer() ?>
 <?php
 Theme::get_footer();

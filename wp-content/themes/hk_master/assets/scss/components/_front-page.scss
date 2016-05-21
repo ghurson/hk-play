@@ -9,6 +9,15 @@
     text-align: right;
     z-index: 2;
 
+    @include breakpoint(xlarge up){
+      position: absolute;
+      top: 430px;
+      left: 465px;
+      text-align: left;
+      z-index: 2;
+      right: initial;
+    }
+
     a {
       padding: 0;
       margin: 0;
@@ -16,12 +25,25 @@
     }
 
     .sub-menu {
-      margin: 7px 0 0 0;
-      padding: 7px 0 0 15px;
-      border-top: 1px solid white;
-
+      margin: 10px 8px 10px 0;
+      padding: 0px 15px 7px 0px;
+      border-right: 1px solid rgba(255, 255, 255, 0.38);
       a {
         font-size: 14px;
+      }
+
+      @include breakpoint(xlarge up) {
+        margin: 10px 0 10px 8px;
+        padding: 0px 0 7px 15px;
+        border-left: 1px solid rgba(255,255,255,0.38);
+        border-right: none;
+      }
+
+      @include breakpoint(small down) {
+        margin: 10px 0 10px 8px;
+        padding: 0px 0 7px 15px;
+        border-left: 1px solid rgba(255,255,255,0.38);
+        border-right: none;
       }
 
     }
@@ -35,8 +57,8 @@
     @include breakpoint(small down) {
       top: auto;
       right: auto;
-      bottom: 15px;
-      left: 15px;
+      bottom: 45px;
+      left: 25px;
       text-align: left;
 
       ul {
@@ -67,6 +89,12 @@
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
+
+    @include breakpoint(small down){
+      background-position: top left;
+      background-size: cover;
+    }
+
   }
 
   .title-block {
@@ -83,6 +111,21 @@
     @include breakpoint(small down) {
       right: -3px;
       top: -5px;
+    }
+
+    @include breakpoint(xlarge up){
+      background-image: url(../svg/title-left-large.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top left;
+      position: absolute;
+      left: 380px;
+      top: 30px;
+      /* bottom: 60px; */
+      opacity: 0.8;
+      width: 490px;
+      height: 385px;
+      /* border: 1px solid white; */
     }
 
   }

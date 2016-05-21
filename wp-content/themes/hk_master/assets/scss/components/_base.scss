@@ -40,13 +40,15 @@ a {
 
 article {
 
-  padding: 30px 30px 45px;
-  margin: 30px 0;
+  padding: 30px 45px;
+
+  .single & {
+    background: $black-shade;
+  }
 
   .blog & {
     background: transparent;
     padding: 0 15px;
-    margin: 0 0 15px 0;
 
     .excerpt-content {
       padding: 15px;
@@ -84,6 +86,11 @@ article {
   z-index: 0;
   bottom: 28px;
   opacity: 0.4;
+
+  @include breakpoint(xlarge up){
+    right: -20%;
+  }
+
 }
 
 .wp-pagenavi {

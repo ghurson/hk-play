@@ -1,7 +1,10 @@
 <div class="hk_header row">
 
-    <object data="<?php print HK_SVG ?>/title-no-byline.svg" type="" class="header_logo"
-            data-url="<?php print site_url() ?>"></object>
+    <div class="header_logo">
+        <a href="<?php print site_url() ?>">
+            <object data="<?php print HK_SVG ?>/title-no-byline.svg"></object>
+        </a>
+    </div>
 
     <div class="show-for-medium hk-desktop-menu">
         <?php wp_nav_menu([
@@ -18,9 +21,9 @@
 
 <div class="hide-for-medium">
     <div class="mobile-menu-container">
-    <?php wp_nav_menu([
-        'theme_location' => 'primary',
-        'menu_class' => 'hk_header_menu'
-    ]) ?>
+        <?php wp_nav_menu([
+            'theme_location' => 'primary',
+            'menu_class' => 'hk_header_menu'
+        ]) ?>
     </div>
 </div>

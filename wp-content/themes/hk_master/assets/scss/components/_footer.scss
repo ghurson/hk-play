@@ -1,7 +1,15 @@
+#frame {
+  padding-bottom: 71px;
+}
+
 .hk_footer {
 
   border-top: 1px solid rgba(255,255,255,.5);
   background-color: $black-shade;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   .hk_footer_menu {
 
@@ -30,5 +38,7 @@
 
 
   }
+
+
 
 }
