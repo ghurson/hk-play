@@ -19,6 +19,9 @@
         <?php the_content() ?>
     </div>
 
-    <?php GH\Display::guitar_licks(get_the_ID()) ?>
 
 </article>
+<br>
+
+<?php GH\Display::guitar_licks(get_the_ID()) ?>
+<?php GH\Display::videos(get_the_ID()) ?>

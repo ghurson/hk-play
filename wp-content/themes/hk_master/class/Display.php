@@ -40,6 +40,11 @@ class Display
         get_template_part("parts/guitar-licks");
     }
 
+    static function videos($id){
+        if($id != 23) return false;
+        get_template_part("parts/videos");
+    }
+
 }
 
 class Blog {
@@ -54,4 +59,27 @@ class Blog {
 
 
     }
+}
+
+class Video {
+
+    static function get_ID($video_url = false){
+
+        if(!$video_url) return false;
+
+        $dom = new \DOMDocument();
+        $dom->loadHTML($video_url);
+        $iframe = $dom->getElementsByTagName('iframe');
+        $url = '';
+        foreach($iframe as $tag) {
+            $url = $tag->getAttribute('src');
+        }
+        $output = parse_url($url, PHP_URL_PATH);
+        $pieces = array_filter(explode('/', $output));
+        $id = end($pieces);
+
+        return $id;
+
+    }
+
 }

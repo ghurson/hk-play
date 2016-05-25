@@ -1,9 +1,8 @@
 <div class="hk_header row">
 
     <div class="header_logo">
-        <a href="<?php print site_url() ?>">
-            <object data="<?php print HK_SVG ?>/title-no-byline.svg"></object>
-        </a>
+        <a href="<?php print site_url() ?>"></a>
+        <object data="<?php print HK_SVG ?>/title-no-byline.svg"></object>
     </div>
 
     <div class="show-for-medium hk-desktop-menu">
