@@ -20,17 +20,30 @@ Theme::output_file_marker(__FILE__);
         <?php get_template_part("parts/home/blog") ?>
 
         <div class="menu">
-            <?php wp_nav_menu([
-                'theme_location' => 'primary'
-            ]) ?>
-            <div class="hide-for-medium">
+            <div class="inner">
+
                 <?php wp_nav_menu([
-                    'theme_location' => 'footer'
+                    'theme_location' => 'primary'
                 ]) ?>
+                <div class="hide-for-medium">
+                    <?php wp_nav_menu([
+                        'theme_location' => 'footer'
+                    ]) ?>
+                </div>
+                <div class="hide-for-medium hk-mobile-hide">
+                    <p>Exit Menu</p>
+                </div>
             </div>
         </div>
 
         <div class="title-block"></div>
+
+        <div class="hide-for-medium">
+            <div class="mobile-launch">
+                <i class="icon-menu"></i>
+                <p>menu</p>
+            </div>
+        </div>
 
     </div>
 <?php

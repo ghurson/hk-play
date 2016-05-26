@@ -12,6 +12,11 @@ Theme::output_file_marker(__FILE__);
 ?>
 <?php get_template_part("parts/interior/header") ?>
     <div id="container" class="row">
+
+        <div class="columns">
+            <h2 class="blog_title">Inside Job Blog</h2>
+        </div>
+
         <div id="content" class="blog-container columns">
 
             <div class="small-up-1 medium-up-2">

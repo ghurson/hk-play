@@ -28,6 +28,22 @@
 
 }
 
+.blog_title {
+  font-weight: 600;
+  text-align: center;
+
+  @include breakpoint(medium up){
+    font-size: 34px;
+  }
+
+  @include breakpoint(small down){
+    text-align: left;
+    padding-left: 15px;
+    font-size: 26px;
+  }
+
+}
+
 .home-blog {
 
   position: absolute;

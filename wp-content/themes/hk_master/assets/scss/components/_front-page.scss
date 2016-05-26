@@ -1,14 +1,39 @@
 
 .front-page {
 
+  .mobile-launch {
+    position: absolute;
+    bottom: 0;
+    left: 29%;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 8px 20px 28px 20px;
+    color: white;
+
+    i {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+    }
+
+  }
+
   div.menu {
 
     position: absolute;
-    top: 340px;
-    left: 40px;
     z-index: 2;
+    top: 0;
+    left: 0;
 
-    @include breakpoint(xlarge up){
+    @include breakpoint(medium up) {
+      top: 340px;
+      left: 40px;
+    }
+
+    @include breakpoint(xlarge up) {
       position: absolute;
       top: 456px;
       left: 459px;
@@ -34,14 +59,14 @@
       @include breakpoint(xlarge up) {
         margin: 10px 0 10px 8px;
         padding: 0px 0 7px 15px;
-        border-left: 1px solid rgba(255,255,255,0.38);
+        border-left: 1px solid rgba(255, 255, 255, 0.38);
         border-right: none;
       }
 
       @include breakpoint(small down) {
         margin: 10px 0 10px 8px;
         padding: 0px 0 7px 15px;
-        border-left: 1px solid rgba(255,255,255,0.38);
+        border-left: 1px solid rgba(255, 255, 255, 0.38);
         border-right: none;
       }
 
@@ -54,11 +79,31 @@
     }
 
     @include breakpoint(small down) {
-      top: auto;
-      right: auto;
-      bottom: 45px;
-      left: 25px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       text-align: left;
+      background: $black-shade-2;
+      display: none;
+
+      .inner {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+      }
+
+      .hk-mobile-hide {
+        color: white;
+        font-weight: 600;
+        line-height: 1;
+        border-top: 1px solid white;
+        padding-top: 4px;
+        margin-top: 13px;
+        p {
+          margin-bottom: 0;
+        }
+      }
 
       ul {
         border-top: none;
@@ -86,10 +131,10 @@
     width: 100%;
     background-image: url(../svg/body.svg);
     background-size: contain;
-    background-position: bottom left;
+    background-position: left center;
     background-repeat: no-repeat;
 
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       background-position: top left;
       background-size: cover;
     }
@@ -109,13 +154,13 @@
 
     @include breakpoint(small down) {
       left: 0;
-      top: 0px;
+      top: 20px;
       right: -14px;
       width: auto;
       background-position: top left;
     }
 
-    @include breakpoint(xlarge up){
+    @include breakpoint(xlarge up) {
       background-image: url(../svg/title-left-large.svg);
       background-repeat: no-repeat;
       background-size: contain;

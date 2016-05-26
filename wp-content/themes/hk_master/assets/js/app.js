@@ -72,6 +72,18 @@ function init_mobile_menu() {
         $(".mobile-menu-container .hk_header_menu").stop().slideToggle();
     })
 
+    if (!$("body").hasClass("home")) return;
+
+    $(".mobile-launch").click(function () {
+        $('.mobile-launch').stop().slideUp();
+        $(".home .menu").stop().slideDown();
+    });
+
+    $(".hk-mobile-hide p").click(function () {
+        $(".home .menu").stop().slideUp();
+        $(".mobile-launch").stop().slideDown();
+    })
+
 }
 
 function init_carousel() {
@@ -83,7 +95,9 @@ function init_carousel() {
     carousel.owlCarousel({
         loop: true,
         center: true,
-        items: 1
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 7500
     });
 
 }
@@ -129,14 +143,12 @@ function init_video_player() {
     });
 
 
-    $(".bottom_poster").click(function(){
+    $(".bottom_poster").click(function () {
         var id = $('.video-slider .active .video').data("index");
         players[id].pauseVideo();
         video_top_slider.trigger("to.owl.carousel", $(this).data("index"));
         video_bottom_slider.trigger("to.owl.carousel", $(this).data("index"));
     })
-
-
 
 
 }
