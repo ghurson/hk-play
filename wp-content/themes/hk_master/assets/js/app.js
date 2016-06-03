@@ -94,10 +94,19 @@ function init_carousel() {
 
     carousel.owlCarousel({
         loop: true,
-        center: true,
-        items: 1,
+        center: false,
         autoplay: true,
-        autoplayTimeout: 7500
+        autoplayTimeout: 7500,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 0
+            },
+            1500: {
+                items: 2
+            }
+        }
     });
 
 }

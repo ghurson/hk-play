@@ -13,7 +13,7 @@
                     </a>
                 </h3>
 
-                <p><?php print wp_trim_words($post->post_content, 20, '') ?></p>
+                <p><?php print apply_filters("the_excerpt", $post->post_excerpt) ?></p>
 
                 <a href="<?php print get_permalink($post->ID) ?>" class="readmore">Read More</a>
 
