@@ -3,7 +3,7 @@
     <h2 class="title">Recent Posts</h2>
 
     <div class="posts owl-carousel">
-        <?php foreach (GH\Blog::get_posts() as $post): ?>
+        <?php foreach (GH\Blog::get_posts(-1) as $post): ?>
             <div class="post item">
 
                 <h3 class="post-title">

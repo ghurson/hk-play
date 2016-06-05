@@ -45,6 +45,18 @@ class Display
         get_template_part("parts/videos");
     }
 
+    static function get_logo(){
+
+        $id = get_the_ID();
+
+        $clean_pages = [17, 19, 92];
+
+        $title = in_array($id, $clean_pages) ? 'title-clean' : 'title-kills';
+
+        print $title;
+
+    }
+
 }
 
 class Blog {

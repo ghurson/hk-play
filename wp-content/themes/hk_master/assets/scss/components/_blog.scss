@@ -63,6 +63,10 @@
   .title {
     text-align: center;
     font-weight: 100;
+
+    @include breakpoint(xlarge up){
+      text-align: left;
+    }
   }
 
   p {

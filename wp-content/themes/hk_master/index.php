@@ -12,7 +12,7 @@ Theme::output_file_marker(__FILE__);
 ?>
 <?php get_template_part("parts/interior/header") ?>
     <div id="container" class="row">
-        <div id="content" class="medium-10 medium-centered columns">
+        <div id="content" class="large-11 large-centered columns">
             <?php Theme::loop('parts/article', 'parts/article-empty') ?>
 
         </div>

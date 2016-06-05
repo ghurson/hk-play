@@ -1,4 +1,4 @@
-@include breakpoint(600px down){
+@include breakpoint(600px down) {
   #wpadminbar {
     top: -46px;
   }
@@ -35,7 +35,7 @@ a {
   &:hover {
     color: red;
   }
-  
+
 }
 
 article {
@@ -55,7 +55,7 @@ article {
       background: $black-shade;
     }
 
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       padding: 0;
     }
   }
@@ -74,7 +74,7 @@ article {
     font-weight: 600;
   }
 
-  @include breakpoint(small down){
+  @include breakpoint(small down) {
 
     padding: 30px 15px;
 
@@ -101,7 +101,7 @@ article {
   bottom: 28px;
   opacity: 0.4;
 
-  @include breakpoint(xlarge up){
+  @include breakpoint(xlarge up) {
     right: -20%;
   }
 
@@ -128,3 +128,49 @@ article {
   }
 
 }
+
+#gform_1 {
+
+  @include breakpoint(medium up) {
+
+    // your name
+    #field_1_1 {
+      width: 50%;
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    // your email address
+    #field_1_2 {
+      width: 50%;
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+
+  label {
+    color: white;
+    font-weight: 300;
+  }
+
+  input[type=text], textarea {
+    background: rgba(255, 255, 255, .25);
+    width: 100%;
+  }
+
+  #gform_submit_button_1 {
+    margin: auto;
+    float: none;
+    display: inherit;
+    background: transparent;
+    border: 1px solid white;
+    padding: 15px 35px;
+    transition: 250ms all ease-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, .25);
+    }
+  }
+
+}
+
