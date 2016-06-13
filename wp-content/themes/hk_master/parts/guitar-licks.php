@@ -1,18 +1,21 @@
 <?php $songs = get_field("songs", 25); ?>
 
-<article>
+<article class="small-up-1 medium-up-2 clearfix">
 
     <?php foreach ($songs as $song): ?>
 
-        <h4><?php print $song['title'] ?></h4>
+        <div class="column">
 
-        <?php
-        print wp_audio_shortcode([
-            'src' => $song['song']['url'],
-        ])
-        ?>
+            <h4><?php print $song['title'] ?></h4>
 
-        <br>
+            <?php
+            print wp_audio_shortcode([
+                'src' => $song['song']['url'],
+            ])
+            ?>
+            <br>
+
+        </div>
 
     <?php endforeach; ?>
 

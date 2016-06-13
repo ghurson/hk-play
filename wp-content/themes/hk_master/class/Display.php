@@ -49,7 +49,7 @@ class Display
 
         $id = get_the_ID();
 
-        $clean_pages = [17, 19, 92];
+        $clean_pages = [9,11,13];
 
         $title = in_array($id, $clean_pages) ? 'title-clean' : 'title-kills';
 

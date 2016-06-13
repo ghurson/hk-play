@@ -15,6 +15,10 @@ Theme::output_file_marker(__FILE__);
 
         <div class="columns">
             <h2 class="blog_title">Inside Job Blog</h2>
+
+            <div class="blog_content">
+                <?php the_field("content", 21) ?>
+            </div>
         </div>
 
         <div id="content" class="blog-container columns">
