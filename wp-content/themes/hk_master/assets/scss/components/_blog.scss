@@ -54,8 +54,8 @@
   bottom: 80px;
 
   @include breakpoint(xlarge up){
-    left: 710px;
-    top: 309px;
+    left: 722px;
+    top: 178px;
     right: 40px;
     bottom: 50px;
   }
@@ -63,6 +63,7 @@
   .title {
     text-align: center;
     font-weight: 100;
+    margin: 0;
 
     @include breakpoint(xlarge up){
       text-align: left;
